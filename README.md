@@ -1,5 +1,7 @@
 # FALDOM
 This library is used for  creating the Http Connections  between andoroid app and webserver.  The methods are simple to use especially created for the newbie in android.
+
+
 # CREATORS
 This library is created by [Falcon](https://github.com/rehmatfalcon) and [Wisdomrider](https://github.com/wisdomrider) On March 22.
 
@@ -9,7 +11,7 @@ This library is created by [Falcon](https://github.com/rehmatfalcon) and [Wisdom
 The methods that needs to be call for getting the response are much more easier and newbie can also easily connect their app to the webservers for data exchange. 
 
 
-# HOW TO ADD THIS TO YOUR PROJECT?
+# HOW TO ADD THIS LIBRARY TO YOUR PROJECT?
 
 ##### First  go to your root build.gradle then add this at the end of property
 
@@ -25,7 +27,7 @@ The methods that needs to be call for getting the response are much more easier 
 #### Then goto your dependency and add this one
 
 ```
-compile 'com.github.wisdomrider:Faldom:0.0.1'
+compile 'com.github.wisdomrider:Faldom:0.0.2'
 
 ```
 
@@ -172,22 +174,19 @@ For passing headers
    
   ```
    
-    ```
     .addParams("paramsname","params key") --- for passing the datas in the form of get and post (Optional)
-  ```
   
   ```
     .setParams(new Hashmap<String,String>) ---if you want to pass whole params once using hashmap (Optional)
-    ```
-  ```
+```
+```
   .setMethodAsPost() -- for making request as Post (Optional)
-    
+   
     ```
 
 ```
     .setMethodAsGet() -- for making get (Optional) -- By default it is get
-    ```
-
+   
 ```
     .setMethod(0) -- for making method 0 for get and 1 for post (Optional)
   ```
