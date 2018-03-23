@@ -1,7 +1,7 @@
 # FALDOM
 This library is used for  creating the Http Connections  between andoroid app and webserver.  The methods are simple to use especially created for the newbie in android.
 # CREATORS
-This library is created by [Falcon](https://www.google.com) and [Wisdomrider](https://www.google.com) On March 22.
+This library is created by [Falcon](https://github.com/rehmatfalcon) and [Wisdomrider](https://github.com/wisdomrider) On March 22.
 
 # WHY TO USE THIS LIBARY?
 
@@ -159,19 +159,45 @@ For passing headers
 
     
 
-# Methods
+# METHODS (Compulsary methods are indicated by /////////////COMPULSARY )
+
+```html
+  
+.Builder(this) --- you have to pass context here (Compulsary) --- for passing context to Faldom /////////////COMPULSARY
 
 ```
-  
-    .Builder(this) --- you have to pass context here (Compulsary) --- for passing context to Faldom
+
+```
     .addHeader("headername","header value") ---for passing headers if necessary (Optional)
+   
+  ```
+   
+    ```
     .addParams("paramsname","params key") --- for passing the datas in the form of get and post (Optional)
+  ```
+  
+  ```
     .setParams(new Hashmap<String,String>) ---if you want to pass whole params once using hashmap (Optional)
-    .setMethodAsPost() -- for making request as Post (Optional)
+    ```
+  ```
+  .setMethodAsPost() -- for making request as Post (Optional)
+    
+    ```
+
+```
     .setMethodAsGet() -- for making get (Optional) -- By default it is get
-     .setMethod(0) -- for making method 0 for get and 1 for post (Optional)
-      .setUrl("https://api.com") -- url that you are sending request to  (compulsary)
-      .after(new Action() {        ---for doing things when you get response for server (Compulsary)
+    ```
+
+```
+    .setMethod(0) -- for making method 0 for get and 1 for post (Optional)
+  ```
+
+```
+     .setUrl("https://api.com") -- url that you are sending request to  (compulsary)   /////////////COMPULSARY
+```
+
+```
+.after(new Action() {        ---for doing things when you get response for server (Compulsary)   /////////////COMPULSARY
                     @Override
                     public void onSuccess(String s) {
                         
@@ -182,7 +208,13 @@ For passing headers
 
                     }
                 });
-                      .setAction(new Action() { --same as the above one (Optional)
+
+```
+
+
+```
+		
+	            .setAction(new Action() { --same as the above one (Optional)
                     @Override
                     public void onSuccess(String s) {
                         
@@ -198,7 +230,7 @@ For passing headers
             
             .post() -- for sending post requests without defining up (Optional)
             
-            .request() -- for sending requst to the server (Compulsary)
+            .request() -- for sending requst to the server (Compulsary)  /////////////COMPULSARY
             
             
 ```
