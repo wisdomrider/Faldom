@@ -1,5 +1,8 @@
 package com.wisdomrider.faldom;
 
+import android.util.Log;
+import android.widget.Toast;
+
 import com.android.volley.NetworkResponse;
 
 /**
@@ -23,7 +26,7 @@ public class FaldomError extends Exception {
     }
 
     public FaldomError(String exceptionMessage, Throwable reason) {
-        super(exceptionMessage, reason);
+        super(exceptionMessage);
         networkResponse = null;
     }
 

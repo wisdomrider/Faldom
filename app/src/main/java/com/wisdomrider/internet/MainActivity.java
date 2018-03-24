@@ -22,7 +22,7 @@ HashMap<String,String> maps=new HashMap<>();
 
         Faldom.Builder(this)
                 .addParam("kusal","aa")
-                .setUrl("https://nasazone.crystalsoft.com.np/api/about-us/list")
+                .setUrl("https://nasazone.crystalsoft.com.np/api/about-us/")
                 .after(new Action() {
                     @Override
                     public void onSuccess(String response) {

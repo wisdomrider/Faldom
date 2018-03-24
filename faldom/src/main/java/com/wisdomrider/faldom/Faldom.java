@@ -2,6 +2,7 @@ package com.wisdomrider.faldom;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.RequestQueue;
@@ -19,6 +20,8 @@ import java.util.Map;
  */
 //indent hus
 public class Faldom {
+    public static int GET = 0;
+    public static int POST = 1;
 
 
     public static BuilderInterface Builder(Context c) {
@@ -26,14 +29,12 @@ public class Faldom {
     }
 
 
-    public static void Request(Context context,
+    public static void Request(final Context context,
                                final HashMap<String, String> params,
                                String url,
                                int Method,
                                final HashMap<String, String> headers,
                                @Nullable final Action callback) {
-
-        //inform when you 1get back    1 min
 
         RequestQueue queue = Volley.newRequestQueue(context);
 
@@ -48,7 +49,9 @@ public class Faldom {
         Response.ErrorListener errorListerner = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError erro) {
-                FaldomError error = new FaldomError(erro);
+                String errorm=erro.getMessage();
+                if(erro.getMessage()==null) errorm="Faldom Network Error ! Please Check Your Connection";
+                FaldomError error = new FaldomError(errorm,erro.getCause());
                 callback.onError(error);
             }
         };
